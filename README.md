@@ -14,11 +14,10 @@ brings this feature to older iOS versions and Android devices.
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-        <script src="hxmobapp.smartbanner.js"></script>
+        <script src="hxmobapp.smartbanner.min.js"></script>
         <script type="text/javascript">
           $(document).ready(function(){
             $.smartbanner({
-                force: 'ios',
                 daysHidden: 14, // Days hidden after banner closed.
                 daysReminder: 30 // Days hidden after the view button pressed.
             });
@@ -30,6 +29,7 @@ brings this feature to older iOS versions and Android devices.
       </body>
     </html>
 
+You'll want to host the linked files from this repository in the above example yourself.
 
 ## Making changes ##
 
