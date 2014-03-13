@@ -18,7 +18,7 @@
             if (UA.match(/Safari/i) != null &&
                (UA.match(/CriOS/i) != null ||
                window.Number(navigator.userAgent.substr(navigator.userAgent.indexOf('OS ') + 3, 3).replace('_', '.')) < 6)) this.type = 'ios' // Check webview and native smart banner support (iOS 6+)
-        } else if (UA.match(/Android/i) != null) {
+        } else if ((UA.match(/Android/i) != null) && (UA.match(/Silk|Kindle/i) === null))  {
             this.type = 'android'
         }
 
