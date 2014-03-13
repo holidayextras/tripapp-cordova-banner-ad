@@ -13,7 +13,11 @@
         $.smartbanner({
             force: 'ios',
             daysHidden: 14, // Days hidden after banner closed.
-            daysReminder: 30 // Days hidden after the view button pressed.
+            daysReminder: 30, // Days hidden after the view button pressed.
+            urlParams: {
+              ga: {foo: "bar"},
+              hxtrack: {bar: "foo"}
+            }
         });
       });
     </script>

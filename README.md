@@ -19,7 +19,11 @@ brings this feature to older iOS versions and Android devices.
           $(document).ready(function(){
             $.smartbanner({
                 daysHidden: 14, // Days hidden after banner closed.
-                daysReminder: 30 // Days hidden after the view button pressed.
+                daysReminder: 30, // Days hidden after the view button pressed.
+                urlParams: {
+                  ga: {foo: "bar"},
+                  hxtrack: {bar: "foo"}
+                }
             });
           });
         </script>

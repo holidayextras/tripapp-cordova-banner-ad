@@ -44,7 +44,7 @@
 
       , create: function() {
             var iconURL = this.options.icon;
-            var link = this.options.url;
+            var link = this.options.urlParams ? (this.options.url + "?" + $.param(this.options.urlParams)) : this.options.url;
             var inStore = this.type === 'ios' ? this.options.inAppStore : this.options.inGooglePlay;
 
             $('body').append('<div id="smartbanner" class="'+this.type+'"><div class="sb-container"><a href="#" class="sb-close">&times;</a><span class="sb-icon" style="background-image:url('+iconURL+');"></span><div class="sb-info"><strong>'+this.title+'</strong><span>'+this.author+'</span><span>'+inStore+'</span></div><a href="'+link+'" class="sb-button"><span>'+this.options.button+'</span></a></div></div>')
@@ -127,6 +127,7 @@
         icon: "app-icon.jpg",
         button: 'VIEW',
         url: "http://mobile.holidayextras.co.uk/redirect",
+        urlParams: null,
         scale: 'auto', // Scale based on viewport size (set to 1 to disable)
         daysHidden: 15, // Duration to hide the banner after being closed (0 = always show banner)
         daysReminder: 90, // Duration to hide the banner after "VIEW" is clicked *separate from when the close button is clicked* (0 = always show banner)
